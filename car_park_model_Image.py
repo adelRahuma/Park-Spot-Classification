@@ -5,8 +5,12 @@ import numpy as np
 from skimage.transform import resize
 
 # Load the saved SVM model
-with open('model.p', 'rb') as model_file:
-    svm_model = pickle.load(model_file)
+if os.path.exists('model.p'):
+    with open('model.p', 'rb') as model_file:
+        svm_model = pickle.load(model_file)
+else:
+    print("File 'model.p' does not exist.")
+    exit()
 
 # Load parking slot positions from 'CarParkPoints'
 try:

@@ -43,7 +43,7 @@ classifier = SVC()
 parameters = [{'gamma': [0.01, 0.001, 0.0001], 'C': [1, 10, 100, 1000]}]
 
 grid_search = GridSearchCV(classifier, parameters) 
-print(" 2 - ...Training the Model!")
+print(" 2 - ...Training the Model...")
 grid_search.fit(x_train, y_train)
 
 # test performance
@@ -55,7 +55,7 @@ score = accuracy_score(y_prediction, y_test)
 
 print(' 4 - {}% of samples were correctly classified'.format(str(score * 100)))
 
-pickle.dump(best_estimator, open('./Park_Spot/model.p', 'wb'))
+pickle.dump(best_estimator, open('./model.p', 'wb'))
 
 
 
