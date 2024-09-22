@@ -1,5 +1,4 @@
 
-
 #  --->  pip install -U scikit-learn
 #  --->  pip install -U scikit-image
 #   instead you can run ---> pip install -r requirements.txt
@@ -21,7 +20,7 @@ categories = ['empty', 'not_empty']
 
 data = []
 labels = []
-print(" 1 - Reading and Resizing the Images...!")
+print(" 1 - Reading and Resizing the Images....!")
 for category_idx, category in enumerate(categories):
     for file in os.listdir(os.path.join(input_dir, category)):
         img_path = os.path.join(input_dir, category, file)
