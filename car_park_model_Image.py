@@ -9,7 +9,7 @@ if os.path.exists('model.p'):
     with open('model.p', 'rb') as model_file:
         svm_model = pickle.load(model_file)
 else:
-    print("File 'model.p' does not exist.")
+    print("File model is not exist.")
     exit()
 
 # Load parking slot positions from 'CarParkPoints'
@@ -65,7 +65,7 @@ while True:
 
         # Predict using the SVM model
         prediction = svm_model.predict(features)[0]
-
+        # print(prediction)
         # Assign color based on model prediction
         if prediction == 0:  # 0 represents 'empty'
             color = (0, 255, 0)  # Green for empty

@@ -3,7 +3,7 @@ import cv2
 import pickle
 
 try:
-     with open('CarParkPoints', 'rb') as f:
+     with open('CarParkPoints_', 'rb') as f:
           posList = pickle.load(f)    
 except:
      posList = []
@@ -18,8 +18,8 @@ def mouseClick(event,x,y,flags,params):
               if x1 < x < x1+width and y1 < y < y1 + height:
                    posList.pop(i)
 
-    with open('CarParkPoints', 'wb') as f:
-         pickle.dump(posList,f)
+#     with open('CarParkPoints', 'wb') as f:
+#          pickle.dump(posList,f)
          
 # read image
 image_path = os.path.join(".","Images","Park.jpg")

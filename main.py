@@ -3,16 +3,15 @@
 #  --->  pip install -U scikit-image
 #   instead you can run ---> pip install -r requirements.txt
 import os
-import pickle
+from sklearn.model_selection import train_test_split
 from skimage.io import imread
 from skimage.transform import resize
 import numpy as np
-from sklearn.model_selection import train_test_split
-from sklearn.model_selection import GridSearchCV
-from sklearn.naive_bayes import GaussianNB
 from sklearn.svm import SVC
+from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import accuracy_score
-
+from sklearn.naive_bayes import GaussianNB
+import pickle     
 
 # prepare data
 input_dir = r'C:\Users\user\clf-data'
