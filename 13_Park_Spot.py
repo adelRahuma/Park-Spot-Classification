@@ -5,10 +5,12 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.svm import SVC
 from sklearn.metrics import accuracy_score
+#Use GridSearchCV to perform hyperparameter tuning, which can help find the best parameters for the SVM
 from sklearn.model_selection import GridSearchCV
 import pickle
 from sklearn.naive_bayes import GaussianNB
 from sklearn.neighbors import KNeighborsClassifier
+#Many machine learning algorithms require the data to be appropriately scaled to perform well. 
 from sklearn.preprocessing import StandardScaler
 
 
