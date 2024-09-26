@@ -11,6 +11,7 @@ except:
 width, height = 48,21
 def mouseClick(event,x,y,flags,params):
     if event == cv2.EVENT_LBUTTONDOWN:
+        print(x,y)
         posList.append((x, y))
     if event == cv2.EVENT_RBUTTONDOWN:
          for i, pos in enumerate(posList):

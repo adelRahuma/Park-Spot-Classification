@@ -9,9 +9,7 @@ try:
 except:
    print('File not exist')
    posList = []
-
 path = os.path.join('.','Images','Park.jpg')
-
 width =48
 height = 20
 
@@ -25,15 +23,12 @@ def mouseClick(event,x,y,flags,param):
             posList.pop(i)
     with open('Park_spots', 'wb') as file:
        pickle.dump(posList,file)
-
 while True:
     img = cv2.imread(path)
     for pos in posList:
-       cv2.rectangle(img,pos, (pos[0] + width, pos[1] + height),(0,255,0),3)
-
+       cv2.rectangle(img,pos, (pos[0] + width, pos[1] + height),(0,255,0),1)
     cv2.imshow('img', img)
     cv2.setMouseCallback('img',mouseClick)
-
     if cv2.waitKey(1) & 0xFF == ord('q'):
        break
 
